@@ -2,15 +2,19 @@ import 'package:flutter/material.dart';
 import 'pages.dart';
 
 void main() {
-  runApp(SettingsUI());
+  runApp(MyApp());
 }
 
-class SettingsUI extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: "Setting UI",
-        home: EditProfilePage());
+      title: 'CommUnity',
+      theme: ThemeData(
+        primaryColor: Color(0XFF607DCC),
+        accentColor: Color(0XFFBACAF3),
+      ),
+      home: HomeScreen(), //HomeScreen(),
+    );
   }
 }
