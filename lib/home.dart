@@ -30,14 +30,16 @@ class _HomeScreenState extends State<HomeScreen> {
               borderRadius: BorderRadius.circular(40),
               color: _selected == i
                   ? Theme.of(context).accentColor
-                  : Color(0xFFdad9db),
+                  // background color
+                  : Color(0xFFdad9db), // 0xFFdad9db, 0xFFE65100
             ),
             child: Icon(
               iconList[i],
               size: 40,
               color: _selected == i
                   ? Theme.of(context).primaryColor
-                  : Color(0xFF7a7a7a),
+                  // icon color
+                  : Color(0xFF7a7a7a), //0xFF7a7a7a, 0xFF880E4F
             )));
   }
 
@@ -87,6 +89,8 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(height: 20),
             if (_selected == 0) HousesPage(),
             if (_selected == 1) CarPoolScreen(),
+            if (_selected == 2) ThriftPage(),
+            // if (_selected == 3),
           ],
         )));
   }

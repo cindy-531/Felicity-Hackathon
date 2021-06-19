@@ -1,3 +1,4 @@
+export 'settings.dart';
 export 'apartments.dart';
 export 'home.dart';
 export 'apt_widget.dart';
@@ -9,3 +10,5 @@ export 'aptpage.dart';
 export 'cars.dart';
 export 'sublet_page.dart';
 export 'test.dart';
+export 'thriftpage.dart';
+export 'thrift_widget.dart';
