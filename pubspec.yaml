@@ -24,6 +24,7 @@ dependencies:
   flutter:
     sdk: flutter
   google_maps_flutter: ^1.0.5
+  carousel_slider: ^3.0.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -51,6 +52,8 @@ flutter:
     - lib/assets/house1.jpeg
     - lib/assets/house2.jpeg
     - lib/assets/house3.jpeg
+    - lib/assets/pfp.jpeg
+    - lib/assets/pfp2.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
