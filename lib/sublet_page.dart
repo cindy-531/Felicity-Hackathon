@@ -1,25 +1,22 @@
 import 'package:flutter/material.dart';
 import 'pages.dart';
 
-class SubletScreen extends StatefulWidget {
-  Apartment apt;
-  SubletScreen(this.apt);
+class SubletScreen extends StatelessWidget {
+  final int index;
+  final String adrs;
+  final String price;
+  final String month;
+  final String info;
 
-  @override
-  _SubletScreenState createState() => _SubletScreenState(apt);
-}
+  SubletScreen(this.index, this.adrs, this.price, this.month, this.info);
 
-class _SubletScreenState extends State<SubletScreen> {
-  Apartment apt;
-  _SubletScreenState(this.apt);
-  List<Color> colors = [
+  final List<Color> colors = [
     Color(0xFFADCCFA),
     Color(0xFFFFDDF3),
     Color(0xFFE7F6D0),
     Color(0xFFD0F6DD),
     Color(0xFFF6D6D0)
   ];
-  int i = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +32,11 @@ class _SubletScreenState extends State<SubletScreen> {
                     borderRadius: BorderRadius.circular(15),
                     color: Colors.grey,
                   ),
-                  child: Image(image: AssetImage(apt.url), fit: BoxFit.cover),
+                  child: Image(
+                      image: AssetImage("lib/assets/sublet" +
+                          ((index % 3) + 1).toString() +
+                          ".jpeg"),
+                      fit: BoxFit.cover),
                 ),
                 Padding(
                   padding: EdgeInsets.only(top: 30),
@@ -64,7 +65,7 @@ class _SubletScreenState extends State<SubletScreen> {
                         size: 30,
                       ),
                       Text(
-                        apt.adrs,
+                        adrs,
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 20),
                       ),
@@ -90,7 +91,7 @@ class _SubletScreenState extends State<SubletScreen> {
                             fontWeight: FontWeight.bold, fontSize: 20),
                       ),
                       Text(
-                        apt.price,
+                        price,
                         style: TextStyle(fontSize: 20),
                       )
                     ],
@@ -104,7 +105,7 @@ class _SubletScreenState extends State<SubletScreen> {
                             fontWeight: FontWeight.bold, fontSize: 20),
                       ),
                       Text(
-                        apt.info,
+                        info,
                         style: TextStyle(fontSize: 20),
                       )
                     ],
@@ -118,7 +119,7 @@ class _SubletScreenState extends State<SubletScreen> {
                             fontWeight: FontWeight.bold, fontSize: 20),
                       ),
                       Text(
-                        apt.month,
+                        month,
                         style: TextStyle(fontSize: 20),
                       )
                     ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'pages.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -43,13 +44,35 @@ class _HomeScreenState extends State<HomeScreen> {
             )));
   }
 
+  Widget _popupAddEntry(BuildContext context) {
+    return new AlertDialog(
+      title: const Text('Add Entry Popup'),
+      content: new Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text("Hello"),
+        ],
+      ),
+      actions: <Widget>[
+        new FlatButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          textColor: Theme.of(context).primaryColor,
+          child: const Text('Close'),
+        ),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xFFEEF1F8),
-        body: Container(
-            //padding: EdgeInsets.all(20.0),
-            child: ListView(
+      backgroundColor: Color(0xFFEEF1F8),
+      body: Container(
+        //padding: EdgeInsets.all(20.0),
+        child: ListView(
           children: [
             Padding(
               padding: EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 0),
@@ -60,10 +83,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Theme.of(context).primaryColor,
                     onPressed: () {
                       Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => SubletScreen(apartments[0])),
-                      );
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => EditProfilePage(),
+                          ));
                     },
                   ),
                   Text(
@@ -92,6 +115,26 @@ class _HomeScreenState extends State<HomeScreen> {
             if (_selected == 2) ThriftPage(),
             // if (_selected == 3),
           ],
-        )));
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // FirebaseFirestore.instance.collection("apartments").add({
+          //   "index": 1,
+          //   "adrs": "Some Street",
+          //   "info": "2/5 Bedrooms",
+          //   "month": "Sep - Jan sublet",
+          //   "price": r"$500/Month",
+          // });
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => AddApartment()),
+          );
+        },
+        tooltip: 'Add House or Apartment',
+        child: const Icon(Icons.add, color: Colors.white),
+        backgroundColor: Colors.black,
+      ),
+    );
   }
 }

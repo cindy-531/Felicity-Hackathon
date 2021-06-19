@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "824442666013",
+    "project_id": "felicityhackathon",
+    "storage_bucket": "felicityhackathon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824442666013:android:5ad71ba080801603ce1af4",
+        "android_client_info": {
+          "package_name": "com.example.student_housing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "824442666013-d6s90kcpb8u19qv599lg7j0c98sn7582.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5ehndgrulb8ZKvPsY-yhsTwZTQYRkaBg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "824442666013-d6s90kcpb8u19qv599lg7j0c98sn7582.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
