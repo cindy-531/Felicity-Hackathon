@@ -5,5 +5,7 @@ export 'houses.dart';
 export 'map_page.dart';
 export 'house_widget.dart';
 export 'carpool.dart';
+export 'add_apt_page.dart';
 export 'aptpage.dart';
+export 'apt_page.dart';
 export 'cars.dart';

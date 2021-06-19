@@ -1,12 +1,12 @@
 class House {
-  String url;
+  int id;
   String adrs;
   String price;
   String month;
   String info;
 
   House({
-    this.url,
+    this.id,
     this.adrs,
     this.price,
     this.month,
@@ -16,24 +16,24 @@ class House {
 
 List<House> houses = [
   House(
-    url: 'lib/assets/house1.jpeg',
-    adrs: '100 Lower Road',
-    price: r'$900/Month',
-    month: "May - August sublet",
+    id: 1,
+    adrs: "100 Lower Road",
+    price: r"$900/Month",
+    month: "May - Aug sublet",
     info: "1/6 Bedrooms Available",
   ),
   House(
-    url: 'lib/assets/house2.jpeg',
-    adrs: '13 Alaska St',
-    price: 'Prices Negotiable',
-    month: "Sept - Jan sublet",
+    id: 2,
+    adrs: "13 Alaska St",
+    price: "Prices Negotiable",
+    month: "Sep - Jan sublet",
     info: "1/5 Bedrooms Available",
   ),
   House(
-    url: 'lib/assets/house3.jpeg',
-    adrs: '254 WindMill Walk',
-    price: r'$650/Month',
-    month: "May - August sublet",
-    info: "3/6 Bedrooms Available",
+    id: 3,
+    adrs: "254 WindMill Walk",
+    price: r"$650/Month",
+    month: "May - Aug sublet",
+    info: "3/6 Bedrooms",
   ),
 ];

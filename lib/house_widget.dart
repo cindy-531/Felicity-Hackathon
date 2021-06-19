@@ -67,7 +67,9 @@ class HouseWidget extends StatelessWidget {
                         ClipRRect(
                           borderRadius: BorderRadius.circular(20),
                           child: Image(
-                            image: AssetImage(house.url),
+                            image: AssetImage("lib/assets/house" +
+                                ((index % 3) + 1).toString() +
+                                ".jpeg"),
                             height: 180,
                             width: 180,
                             fit: BoxFit.cover,
