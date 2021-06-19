@@ -62,42 +62,51 @@ class Apts extends StatelessWidget {
                         ),
                       ],
                     ),
-                    child: Stack(
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(20),
-                          child: Image(
-                            image: AssetImage(apartment.url),
-                            height: 180,
-                            width: 180,
-                            fit: BoxFit.cover,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SubletScreen(apartment)),
+                        );
+                      },
+                      child: Stack(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(20),
+                            child: Image(
+                              image: AssetImage(apartment.url),
+                              height: 180,
+                              width: 180,
+                              fit: BoxFit.cover,
+                            ),
                           ),
-                        ),
-                        Positioned(
-                          left: 10,
-                          bottom: 10,
-                          child: Column(
-                            children: [
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  Icon(
-                                    Icons.location_on,
-                                    color: Colors.white,
-                                    size: 13,
-                                  ),
-                                  Text(apartment.adrs,
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        letterSpacing: 1.2,
-                                        fontWeight: FontWeight.bold,
-                                      )),
-                                ],
-                              ),
-                            ],
-                          ),
-                        )
-                      ],
+                          Positioned(
+                            left: 10,
+                            bottom: 10,
+                            child: Column(
+                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Icon(
+                                      Icons.location_on,
+                                      color: Colors.white,
+                                      size: 13,
+                                    ),
+                                    Text(apartment.adrs,
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          letterSpacing: 1.2,
+                                          fontWeight: FontWeight.bold,
+                                        )),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ],
